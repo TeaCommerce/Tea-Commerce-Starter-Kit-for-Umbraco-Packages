@@ -34,13 +34,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2015 10:38:10</publishTime>
     </File>
     <File Include="bin/ZeroCostPaymentMethodManagement.dll">
-      <publishTime>05/12/2015 10:09:39</publishTime>
+      <publishTime>05/12/2015 11:00:23</publishTime>
     </File>
     <File Include="bin/ZeroCostPaymentMethodManagement.pdb">
-      <publishTime>05/12/2015 10:09:39</publishTime>
+      <publishTime>05/12/2015 11:00:22</publishTime>
+    </File>
+    <File Include="Config/ZeroCostPaymentMethodHandler.config">
+      <publishTime>05/12/2015 11:00:13</publishTime>
     </File>
     <File Include="Views/CartStep3.cshtml">
-      <publishTime>05/12/2015 10:07:28</publishTime>
+      <publishTime>05/12/2015 10:22:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

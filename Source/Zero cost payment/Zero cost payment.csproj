@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\ZeroCostPaymentMethodHandler.config" />
     <None Include="Properties\PublishProfiles\Publish to local test site.pubxml" />
   </ItemGroup>
   <PropertyGroup>
