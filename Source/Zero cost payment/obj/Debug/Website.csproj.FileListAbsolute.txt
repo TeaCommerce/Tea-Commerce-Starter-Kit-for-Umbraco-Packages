@@ -1,0 +1,5 @@
+D:\Projekter\Zero cost payment method management\Source\Website\bin\ZeroCostPaymentMethodManagement.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\ZeroCostPaymentMethodManagement.pdb
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\ZeroCostPaymentMethodManagement.dll
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\ZeroCostPaymentMethodManagement.pdb

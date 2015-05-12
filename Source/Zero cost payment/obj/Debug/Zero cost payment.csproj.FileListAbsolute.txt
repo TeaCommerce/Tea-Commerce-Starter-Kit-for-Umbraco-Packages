@@ -1,0 +1,13 @@
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\ZeroCostPaymentMethodManagement.dll
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\ZeroCostPaymentMethodManagement.pdb
+D:\Projekter\Zero cost payment method management\Source\Website\obj\Debug\Zero cost payment.csprojResolveAssemblyReference.cache
+D:\Projekter\Zero cost payment method management\Source\Website\bin\ZeroCostPaymentMethodManagement.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\ZeroCostPaymentMethodManagement.pdb
+D:\Projekter\Zero cost payment method management\Source\Website\bin\businesslogic.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\cms.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\interfaces.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\TeaCommerce.Api.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\TeaCommerce.Api.Web.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\TeaCommerce.Umbraco.Web.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\Umbraco.Core.dll
+D:\Projekter\Zero cost payment method management\Source\Website\bin\umbraco.dll
