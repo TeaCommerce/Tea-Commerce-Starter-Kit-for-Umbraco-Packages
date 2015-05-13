@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zero cost payment", "Zero cost payment\Zero cost payment.csproj", "{4E65B25F-8A29-4F32-A129-6479D96366E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroCostPayment", "ZeroCostPayment\ZeroCostPayment.csproj", "{4E65B25F-8A29-4F32-A129-6479D96366E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

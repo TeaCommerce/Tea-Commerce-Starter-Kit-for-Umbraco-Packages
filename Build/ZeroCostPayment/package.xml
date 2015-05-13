@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>CartStep3.cshtml</guid>
+      <orgPath>/Views</orgPath>
+      <orgName>CartStep3.cshtml</orgName>
+    </file>
+	<file>
+      <guid>ZeroCostPaymentMethodHandler.config</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>ZeroCostPaymentMethodHandler.config</orgName>
+    </file>
+	<file>
+      <guid>ZeroCostPaymentHandler.cs</guid>
+      <orgPath>\EventHandlers</orgPath>
+      <orgName>ZeroCostPaymentHandler.cs</orgName>
+    </file>
+	<file>
+      <guid>ZeroCostPaymentConfig.cs</guid>
+      <orgPath>\Models\Settings</orgPath>
+      <orgName>ZeroCostPaymentConfig.cs</orgName>
+    </file>
+	<file>
+      <guid>ConfigReaderService.cs</guid>
+      <orgPath>\Services</orgPath>
+      <orgName>ConfigReaderService.cs</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Starterkit for Umbraco - Packages - Zero cost payment</name>
+      <version>1.0.1</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://teacommerce.net/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Tea Commerce</name>
+      <website>http://teacommerce.net/</website>
+    </author>
+    <readme><![CDATA[Thanks for installing the Zero Cost Payment package for the Tea Commerce starter kit.
+
+We hope you will be pleased with our product and use it to create a fantastic e-commerce solution.
+
+SUPPORT
+The Tea Commerce team is always ready to help you!
+http://teacommerce.net/ressources/support/
+
+Tea Commerce
+info@teacommerce.net
++45 82 307 306]]></readme>
+  </info>
+  <Documents />
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets/>
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <Actions />
+</umbPackage>

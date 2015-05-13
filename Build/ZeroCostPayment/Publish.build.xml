@@ -1,0 +1,65 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="JavaScriptMinify">
+
+  <!-- IMPORTS -->
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.targets" />
+  
+  <!-- PROPERTIES -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<BuildDir>..\ZeroCostPayment</BuildDir>
+	<WebDir>..\..\Source\ZeroCostPayment</WebDir>
+	<PublishDir>Publish</PublishDir>
+  </PropertyGroup>
+  
+  <!-- COMPILE -->
+  <Target Name="Compile">
+    <ItemGroup>
+      <ProjectsToBuild Include="$(BuildProjectDir)\*proj" />
+    </ItemGroup>
+    <MSBuild Targets="Rebuild" Projects="@(ProjectsToBuild)" Properties="Configuration=$(Configuration);" />
+  </Target>
+  
+  <!-- CLEAN -->
+  <Target Name="Clean" DependsOnTargets="Compile">
+    <ItemGroup>
+      <FilesToRemove Include="$(PublishDir)\**\*.*" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views;$(PublishDir)\Media" />
+    </ItemGroup>
+    <RemoveDir Directories="@(DirectoriesToRemove)" />
+	<Delete Files="@(FilesToRemove)" />
+  </Target>
+  
+  <Target Name="CopyFiles" DependsOnTargets="Clean">
+    <ItemGroup>  
+	  <CartStep Include="$(WebDir)\Views\CartStep3.cshtml" />
+	  <ConfigFile Include="$(WebDir)\Config\ZeroCostPaymentMethodHandler.config" />
+	  <EventHandler Include="$(WebDir)\EventHandlers\ZeroCostPaymentHandler.cs" />
+	  <Settings Include="$(WebDir)\Models\Settings\ZeroCostPaymentConfig.cs" />
+	  <ReaderService Include="$(WebDir)\Services\ConfigReaderService.cs" />
+	  <Package Include="$(BuildDir)\package.xml" />
+    </ItemGroup>
+	
+	<Copy SourceFiles="@(CartStep)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(EventHandler)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Settings)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(ReaderService)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />		
+	
+<!-- 	<Copy SourceFiles="@(CartStep)" DestinationFolder="$(PublishDir)\Views\" />
+	<Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(PublishDir)\Config\" />
+	<Copy SourceFiles="@(EventHandler)" DestinationFolder="$(PublishDir)\EventHandlers\" />
+	<Copy SourceFiles="@(Settings)" DestinationFolder="$(PublishDir)\Models\Settings\" />
+	<Copy SourceFiles="@(ReaderService)" DestinationFolder="$(PublishDir)\Services\" />
+	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />	 -->
+	
+  </Target>
+  
+  <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
+  </Target>
+  
+</Project>
