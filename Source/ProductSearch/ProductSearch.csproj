@@ -45,7 +45,6 @@
     <Content Include="Config\ExamineSettings.config" />
     <None Include="Properties\PublishProfiles\ProductSearch.pubxml" />
     <Content Include="Views\ProductSearchPage.cshtml" />
-    <Content Include="Views\CartStep3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="businesslogic">
