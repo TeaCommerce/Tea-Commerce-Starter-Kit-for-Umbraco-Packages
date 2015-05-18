@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>D:\Projects\Starter-kit-for-Umbraco-Packages\Source\ProductSearch\Views\ProductSearchPage.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Projects\Starter-kit-for-Umbraco-Packages\Source\ProductSearch\Config\ExamineSettings.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Projects\Starter-kit-for-Umbraco-Packages\Source\ProductSearch\Config\ExamineIndex.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Projects\Starter-kit-for-Umbraco-Packages\Source\ProductSearch\Properties\PublishProfiles\ProductSearch.pubxml</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

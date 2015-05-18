@@ -7,8 +7,8 @@
     <ProjectGuid>{217FC184-713C-4207-AC8C-C6F618FD9B67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeaCommerce.StarterKit.Install</RootNamespace>
-    <AssemblyName>TeaCommerce.StarterKit.Install</AssemblyName>
+    <RootNamespace>ProductSearchPage.Install</RootNamespace>
+    <AssemblyName>ProductSearchPage.Install</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TeaCommerceStarterKitInstall.cs" />
+    <Compile Include="ProductSearchPageInstall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="cms">

@@ -2,7 +2,7 @@
 
   <!-- IMPORTS -->
   <PropertyGroup>
-    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
   </PropertyGroup>
   
   <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.targets" />
@@ -10,9 +10,9 @@
   <!-- PROPERTIES -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<BuildDir>..\Build</BuildDir>
-	<BuildProjectDir>..\Build\Source\TeaCommerce.StarterKit.Install</BuildProjectDir>
-	<WebDir>..\Source\Website</WebDir>
+	<BuildDir>..\ProductSearch</BuildDir>
+	<BuildProjectDir>Source\ProductSearchPage.Install</BuildProjectDir>
+	<WebDir>..\..\Source\ProductSearch</WebDir>
 	<PublishDir>Publish</PublishDir>
   </PropertyGroup>
   
@@ -28,7 +28,7 @@
   <Target Name="Clean" DependsOnTargets="Compile">
     <ItemGroup>
       <FilesToRemove Include="$(PublishDir)\**\*.*" />
-	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views;$(PublishDir)\Media" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Config;$(PublishDir)\Views;$(PublishDir)" />
     </ItemGroup>
     <RemoveDir Directories="@(DirectoriesToRemove)" />
 	<Delete Files="@(FilesToRemove)" />
@@ -36,29 +36,18 @@
   
   <Target Name="CopyFiles" DependsOnTargets="Clean">
     <ItemGroup>
-	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
-	  <Scripts Include="$(WebDir)\Scripts\**" />
-	  <Media Include="$(BuildDir)\Media\**" />
-	  <Minicart Include="$(WebDir)\Views\**\Minicart.cshtml" />
-	  <TopMenu Include="$(WebDir)\Views\**\TopMenu.cshtml" />
+	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\ProductSearchPage.Install.dll" />	  
+	  <ExamineIndex Include="$(WebDir)\Config\ExamineIndex.config" />
+	  <ExamineSettings Include="$(WebDir)\Config\ExamineSettings.config" />
+	  <ProductSearchPage Include="$(WebDir)\Views\ProductSearchPage.cshtml" />
 	  <Package Include="$(BuildDir)\package.xml" />
     </ItemGroup>
 	
- 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\da\%(RecursiveDir)" />
-	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
-	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\Partials\Cart" />
-	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views\Partials\Navigation" />
+ 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin" />
+	<Copy SourceFiles="@(ExamineIndex)" DestinationFolder="$(PublishDir)\Config" />
+	<Copy SourceFiles="@(ExamineSettings)" DestinationFolder="$(PublishDir)\Config" />
+	<Copy SourceFiles="@(ProductSearchPage)" DestinationFolder="$(PublishDir)\Views" />
 	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\Media" /> 
-	
-<!-- 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)" /> -->
-	
-	
   </Target>
   
   <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">

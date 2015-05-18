@@ -2,8 +2,8 @@
 
   <!-- IMPORTS -->
   <PropertyGroup>
-    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
-	<MSBuildExtensionsPath>$(MSBuildProjectDirectory)\Tools\MSBuild extension pack</MSBuildExtensionsPath>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
+	<MSBuildExtensionsPath>$(MSBuildProjectDirectory)\..\Tools\MSBuild extension pack</MSBuildExtensionsPath>
 	<MSBuildExtensionPackTasksPath>$(MSBuildExtensionsPath)\ExtensionPack\4.0\</MSBuildExtensionPackTasksPath>
   </PropertyGroup>
   
@@ -60,7 +60,7 @@
 	<XmlRead XPath="umbPackage/info/package/version" XmlFileName="$(PublishDir)\package.xml">
 	  <Output TaskParameter="Value" PropertyName="Version" />
 	</XmlRead>
-	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\Tea Commerce $(Version).zip" WorkingDirectory="$(PublishDir)" />
+	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\Tea Commerce - Product Search Page $(Version).zip" WorkingDirectory="$(PublishDir)" />
   </Target>
   
 </Project>

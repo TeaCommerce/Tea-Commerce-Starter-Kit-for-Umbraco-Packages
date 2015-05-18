@@ -6,10 +6,20 @@
       <orgPath>/Config</orgPath>
       <orgName>ExamineIndex.config</orgName>
     </file>
-	    <file>
+	<file>
       <guid>ExamineSettings.config</guid>
       <orgPath>/Config</orgPath>
       <orgName>ExamineSettings.config</orgName>
+    </file>
+	<file>
+      <guid>ProductSearchPage.cshtml</guid>
+      <orgPath>/Views</orgPath>
+      <orgName>ProductSearchPage.cshtml</orgName>
+    </file>
+    <file>
+      <guid>TeaCommerce.StarterKit.Install.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>TeaCommerce.StarterKit.Install.dll</orgName>
     </file>
   </files>
   <info>
@@ -135,4 +145,7 @@
   <DictionaryItems />
   <Languages />
   <DataTypes />
+    <Actions>
+    <Action runat="install" alias="TeaCommerceStarterKitInstaller" />
+  </Actions>
 </umbPackage>
