@@ -95,10 +95,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AutomatedMaillingController.cs" />
+    <Compile Include="EventHandlers\FollowUpMailHandler.cs" />
     <Compile Include="Models\EmailTemplate\FollowUpOrderTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AutomatedMaillingRepository.cs" />
     <Compile Include="Services\AutomatedMaillingService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Publish to packages test.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
