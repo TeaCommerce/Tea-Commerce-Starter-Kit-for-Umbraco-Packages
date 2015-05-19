@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroCostPayment", "ZeroCostPayment\ZeroCostPayment.csproj", "{4E65B25F-8A29-4F32-A129-6479D96366E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSearch", "ProductSearch\ProductSearch.csproj", "{2A106B5E-8AB7-4319-A914-7BD24F0594CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 		{4E65B25F-8A29-4F32-A129-6479D96366E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E65B25F-8A29-4F32-A129-6479D96366E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E65B25F-8A29-4F32-A129-6479D96366E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A106B5E-8AB7-4319-A914-7BD24F0594CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A106B5E-8AB7-4319-A914-7BD24F0594CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

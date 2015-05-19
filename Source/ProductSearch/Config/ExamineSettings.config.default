@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+
+<Examine>
+  <ExamineIndexProviders>
+    <providers>
+
+      <add name="ProductIndexer" type="UmbracoExamine.UmbracoContentIndexer, UmbracoExamine" analyzer="Lucene.Net.Analysis.Standard.StandardAnalyzer, Lucene.Net"/>
+
+    </providers>
+  </ExamineIndexProviders>
+
+  <ExamineSearchProviders defaultProvider="ExternalSearcher">
+    <providers>
+      
+      <add name="ProductSearcher" type="UmbracoExamine.UmbracoExamineSearcher, UmbracoExamine" analyzer="Lucene.Net.Analysis.Standard.StandardAnalyzer, Lucene.Net"/>
+    
+    </providers>
+  </ExamineSearchProviders>
+
+</Examine>

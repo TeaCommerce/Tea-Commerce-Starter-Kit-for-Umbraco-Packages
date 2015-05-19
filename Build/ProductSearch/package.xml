@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+	<file>
+      <guid>ProductSearchPage.cshtml</guid>
+      <orgPath>/Views</orgPath>
+      <orgName>ProductSearchPage.cshtml</orgName>
+    </file>
+    <file>
+      <guid>ProductSearchPage.Install.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>ProductSearchPage.Install.dll</orgName>
+    </file>
+	    <file>
+      <guid>ExamineIndex.config.default</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>ExamineIndex.config.default</orgName>
+    </file>
+	<file>
+      <guid>ExamineSettings.config.default</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>ExamineSettings.config.default</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Product Search Page</name>
+      <version>1.0</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://teacommerce.net/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Tea Commerce</name>
+      <website>http://teacommerce.net/</website>
+    </author>
+    <readme><![CDATA[Thanks for installing the Product Search Page package for the Tea Commerce starter kit.
+
+We hope you will be pleased with our product and use it to create a fantastic e-commerce solution.
+
+SUPPORT
+The Tea Commerce team is always ready to help you!
+http://teacommerce.net/ressources/support/
+
+Tea Commerce
+info@teacommerce.net
++45 82 307 306]]></readme>
+  </info>
+  <DocumentTypes>
+    <DocumentType>
+      <Info>
+        <Name>Product search page</Name>
+        <Alias>ProductSearchPage</Alias>
+        <Icon>icon-search</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>ProductSearchPage</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>ProductSearchPage</DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+  </DocumentTypes>
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+    <Actions>
+	<Action runat="install" alias="MergeXmlFile" sourceFile="~/config/examineIndex.config.default" createIfTargetFileNotExists="true" targetFile="~/config/examineIndex.config" overwriteValues="true" embeddedResource="false" />
+	<Action runat="install" alias="MergeXmlFile" sourceFile="~/config/examineSettings.config.default" createIfTargetFileNotExists="true" targetFile="~/config/examineSettings.config" overwriteValues="true" embeddedResource="false" />
+    <Action runat="install" alias="ProductSearchPageInstaller" />
+  </Actions>
+</umbPackage>

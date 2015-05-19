@@ -1,0 +1,56 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="JavaScriptMinify">
+
+  <!-- IMPORTS -->
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.targets" />
+  
+  <!-- PROPERTIES -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<BuildDir>..\ProductSearch</BuildDir>
+	<BuildProjectDir>Source\ProductSearchPage.Install</BuildProjectDir>
+	<WebDir>..\..\Source\ProductSearch</WebDir>
+	<PublishDir>Publish</PublishDir>
+  </PropertyGroup>
+  
+  <!-- COMPILE -->
+  <Target Name="Compile">
+    <ItemGroup>
+      <ProjectsToBuild Include="$(BuildProjectDir)\*proj" />
+    </ItemGroup>
+    <MSBuild Targets="Rebuild" Projects="@(ProjectsToBuild)" Properties="Configuration=$(Configuration);" />
+  </Target>
+  
+  <!-- CLEAN -->
+  <Target Name="Clean" DependsOnTargets="Compile">
+    <ItemGroup>
+      <FilesToRemove Include="$(PublishDir)\**\*.*" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Config;$(PublishDir)\Views;$(PublishDir)" />
+    </ItemGroup>
+    <RemoveDir Directories="@(DirectoriesToRemove)" />
+	<Delete Files="@(FilesToRemove)" />
+  </Target>
+  
+  <Target Name="CopyFiles" DependsOnTargets="Clean">
+    <ItemGroup>
+	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\ProductSearchPage.Install.dll" />	  
+	  <ExamineIndex Include="$(WebDir)\Config\ExamineIndex.config.default" />
+	  <ExamineSettings Include="$(WebDir)\Config\ExamineSettings.config.default" />
+	  <ProductSearchPage Include="$(WebDir)\Views\ProductSearchPage.cshtml" />
+	  <Package Include="$(BuildDir)\package.xml" />
+    </ItemGroup>
+	
+ 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\da" />
+	<Copy SourceFiles="@(ExamineIndex)" DestinationFolder="$(PublishDir)\Config" />
+	<Copy SourceFiles="@(ExamineSettings)" DestinationFolder="$(PublishDir)\Config" />
+	<Copy SourceFiles="@(ProductSearchPage)" DestinationFolder="$(PublishDir)\Views" />
+	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
+  </Target>
+  
+  <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
+  </Target>
+  
+</Project>

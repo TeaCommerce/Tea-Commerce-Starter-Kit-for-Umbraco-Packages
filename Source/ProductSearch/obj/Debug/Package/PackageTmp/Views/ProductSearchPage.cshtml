@@ -18,7 +18,6 @@
   //store id
   long storeId = 1;
 
-
   //Product
   string ProductTypeName = "Product";
 
@@ -31,10 +30,15 @@
   UmbracoHelper helper = new UmbracoHelper( UmbracoContext.Current );
 }
 <div class="container">
-  <form action="@searchUrl" method="get">
+  <form action="@searchUrl" method="get" class="form-horizontal">
     <div class="form-group">
-      <input class="form-control" name="q" type="text" value="@Request.QueryString[ "q" ]"/>
-    </div><input class="form-control" type="submit" value="Search"/>
+      <div class="col-sm-3">
+        <input class="form-control" name="q" type="text" value="@Request.QueryString[ "q" ]"/>
+      </div>
+      <div class="col-sm-1">
+        <input class="form-control" type="submit" value="Search"/>
+      </div>
+    </div>
   </form>
 </div>
 
