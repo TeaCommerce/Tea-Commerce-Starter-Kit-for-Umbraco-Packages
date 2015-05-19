@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<ExamineLuceneIndexSets>
+
+  <IndexSet SetName="ProductIndexSet" IndexPath="~/App_Data/TEMP/ExamineIndexes/ProductIndexSet/">
+    <IncludeNodeTypes>
+      <add Name="Product"/>
+    </IncludeNodeTypes>
+  </IndexSet>
+
+</ExamineLuceneIndexSets>

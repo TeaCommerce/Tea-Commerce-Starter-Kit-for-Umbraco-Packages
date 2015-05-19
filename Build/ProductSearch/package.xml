@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <umbPackage>
   <files>
-    <file>
-      <guid>ExamineIndex.config</guid>
-      <orgPath>/Config</orgPath>
-      <orgName>ExamineIndex.config</orgName>
-    </file>
-	<file>
-      <guid>ExamineSettings.config</guid>
-      <orgPath>/Config</orgPath>
-      <orgName>ExamineSettings.config</orgName>
-    </file>
 	<file>
       <guid>ProductSearchPage.cshtml</guid>
       <orgPath>/Views</orgPath>
       <orgName>ProductSearchPage.cshtml</orgName>
     </file>
     <file>
-      <guid>TeaCommerce.StarterKit.Install.dll</guid>
+      <guid>ProductSearchPage.Install.dll</guid>
       <orgPath>/bin</orgPath>
-      <orgName>TeaCommerce.StarterKit.Install.dll</orgName>
+      <orgName>ProductSearchPage.Install.dll</orgName>
+    </file>
+	    <file>
+      <guid>ExamineIndex.config.default</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>ExamineIndex.config.default</orgName>
+    </file>
+	<file>
+      <guid>ExamineSettings.config.default</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>ExamineSettings.config.default</orgName>
     </file>
   </files>
   <info>
@@ -71,19 +71,15 @@ info@teacommerce.net
       <Tabs />
     </DocumentType>
   </DocumentTypes>
-  <Templates>
-    <Template>
-      <Name>Product search page</Name>
-      <Alias>ProductSearchPage.cshtml</Alias>
-      <Design></Design>
-    </Template>
-  </Templates>
+  <Templates />
   <Stylesheets />
   <Macros />
   <DictionaryItems />
   <Languages />
   <DataTypes />
     <Actions>
-    <Action runat="install" alias="TeaCommerceStarterKitInstaller" />
+	<Action runat="install" alias="MergeXmlFile" sourceFile="~/config/examineIndex.config.default" createIfTargetFileNotExists="true" targetFile="~/config/examineIndex.config" overwriteValues="true" embeddedResource="false" />
+	<Action runat="install" alias="MergeXmlFile" sourceFile="~/config/examineSettings.config.default" createIfTargetFileNotExists="true" targetFile="~/config/examineSettings.config" overwriteValues="true" embeddedResource="false" />
+    <Action runat="install" alias="ProductSearchPageInstaller" />
   </Actions>
 </umbPackage>

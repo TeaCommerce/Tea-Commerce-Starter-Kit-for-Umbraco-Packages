@@ -25,6 +25,20 @@ namespace ProductSearchPage.Install {
       IMediaService mediaService = ApplicationContext.Current.Services.MediaService;
       IContentService contentService = UmbracoContext.Current.Application.Services.ContentService;
       IContentTypeService contentTypeService = ApplicationContext.Current.Services.ContentTypeService;
+      IFileService fileService = ApplicationContext.Current.Services.FileService;
+
+      //Override ProductSearchPage.cshtml file
+      string productSearchPagePath = HttpContext.Current.Server.MapPath( "~/Views/ProductSearchPage.cshtml" );
+
+      string allCshtmlText = File.ReadAllText( productSearchPagePath );
+
+      ITemplate template = new Template( "~/Views/ProductSearchPage.cshtml", "Product search page", "ProductSearchPage" );
+      fileService.SaveTemplate( template );
+
+      File.WriteAllText( productSearchPagePath, allCshtmlText );
+
+      var productSearchPage = contentTypeService.GetContentType( "ProductSearchPage" );
+      productSearchPage.SetDefaultTemplate( template );
 
       //Create ProductSearchPage
       IContent langContent = contentService.GetByLevel( 1 ).FirstOrDefault();

@@ -37,13 +37,13 @@
   <Target Name="CopyFiles" DependsOnTargets="Clean">
     <ItemGroup>
 	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\ProductSearchPage.Install.dll" />	  
-	  <ExamineIndex Include="$(WebDir)\Config\ExamineIndex.config" />
-	  <ExamineSettings Include="$(WebDir)\Config\ExamineSettings.config" />
+	  <ExamineIndex Include="$(WebDir)\Config\ExamineIndex.config.default" />
+	  <ExamineSettings Include="$(WebDir)\Config\ExamineSettings.config.default" />
 	  <ProductSearchPage Include="$(WebDir)\Views\ProductSearchPage.cshtml" />
 	  <Package Include="$(BuildDir)\package.xml" />
     </ItemGroup>
 	
- 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin" />
+ 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\da" />
 	<Copy SourceFiles="@(ExamineIndex)" DestinationFolder="$(PublishDir)\Config" />
 	<Copy SourceFiles="@(ExamineSettings)" DestinationFolder="$(PublishDir)\Config" />
 	<Copy SourceFiles="@(ProductSearchPage)" DestinationFolder="$(PublishDir)\Views" />

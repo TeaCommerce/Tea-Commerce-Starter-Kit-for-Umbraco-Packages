@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MergeXmlFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductSearchPageInstall.cs" />
   </ItemGroup>
@@ -50,6 +51,9 @@
     </Reference>
     <Reference Include="TeaCommerce.Api.Web">
       <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Api.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="TeaCommerce.Umbraco.Install">
+      <HintPath>..\..\..\..\Lib\Tea Commerce for Umbraco\TeaCommerce.Umbraco.Install.dll</HintPath>
     </Reference>
     <Reference Include="TeaCommerce.Umbraco.Web">
       <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Umbraco.Web.dll</HintPath>

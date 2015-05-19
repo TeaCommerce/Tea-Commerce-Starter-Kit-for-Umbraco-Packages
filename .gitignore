@@ -180,4 +180,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-Build/ProductSearch/Source/ProductSearchPage.Install.tss
+*.tss
