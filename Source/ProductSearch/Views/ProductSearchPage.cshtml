@@ -29,6 +29,7 @@
 
   UmbracoHelper helper = new UmbracoHelper( UmbracoContext.Current );
 }
+
 <div class="container">
   <form action="@searchUrl" method="get" class="form-horizontal">
     <div class="form-group">
@@ -36,7 +37,7 @@
         <input class="form-control" name="q" type="text" value="@Request.QueryString[ "q" ]"/>
       </div>
       <div class="col-sm-1">
-        <input class="form-control" type="submit" value="Search"/>
+        <input class="form-control" type="submit" value="Search" />
       </div>
     </div>
   </form>

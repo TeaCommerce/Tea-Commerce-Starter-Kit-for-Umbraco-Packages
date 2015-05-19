@@ -15,7 +15,7 @@ using Umbraco.Web;
 using ContentExtensions = umbraco.ContentExtensions;
 using File = System.IO.File;
 
-namespace TeaCommerce.StarterKit.Install {
+namespace ProductSearchPage.Install {
   public class ProductSearchPageInstall : IPackageAction {
     public string Alias() {
       return "ProductSearchPageInstaller";
