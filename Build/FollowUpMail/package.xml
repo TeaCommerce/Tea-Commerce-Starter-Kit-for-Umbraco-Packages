@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+	<file>
+      <guid>FollowUpMail.config</guid>
+      <orgPath>/Config</orgPath>
+      <orgName>FollowUpMail.config</orgName>
+    </file>
+	<file>
+      <guid>AutomatedMaillingController.cs</guid>
+      <orgPath>\Controllers</orgPath>
+      <orgName>AutomatedMaillingController.cs</orgName>
+    </file>
+	<file>
+      <guid>FollowUpMailHandler.cs</guid>
+      <orgPath>\EventHandlers</orgPath>
+      <orgName>FollowUpMailHandler.cs</orgName>
+    </file>
+	<file>
+      <guid>FollowUpMailConfig.cs</guid>
+      <orgPath>\Models\Settings</orgPath>
+      <orgName>FollowUpMailConfig.cs</orgName>
+    </file>
+	<file>
+      <guid>AutomatedMaillingService.cs</guid>
+      <orgPath>\Services</orgPath>
+      <orgName>AutomatedMaillingService.cs</orgName>
+    </file>
+	<file>
+      <guid>ConfigReaderService.cs</guid>
+      <orgPath>\Services</orgPath>
+      <orgName>ConfigReaderService.cs</orgName>
+    </file>
+	<file>
+      <guid>AutomatedMaillingRepository.cs</guid>
+      <orgPath>\Repositories</orgPath>
+      <orgName>AutomatedMaillingRepository.cs</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Starterkit for Umbraco - Packages - Follow Up Mail</name>
+      <version>1.0.1</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://teacommerce.net/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Tea Commerce</name>
+      <website>http://teacommerce.net/</website>
+    </author>
+    <readme><![CDATA[Thanks for installing the Follow Up Mail package for the Tea Commerce starter kit.
+
+We hope you will be pleased with our product and use it to create a fantastic e-commerce solution.
+
+SUPPORT
+The Tea Commerce team is always ready to help you!
+http://teacommerce.net/ressources/support/
+
+Tea Commerce
+info@teacommerce.net
++45 82 307 306]]></readme>
+  </info>
+  <Documents />
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets/>
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <Actions />
+</umbPackage>
