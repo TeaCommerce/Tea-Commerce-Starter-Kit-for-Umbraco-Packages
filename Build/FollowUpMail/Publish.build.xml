@@ -36,22 +36,12 @@
   <Target Name="CopyFiles" DependsOnTargets="Clean">
     <ItemGroup>
 	  <ConfigFile Include="$(WebDir)\Config\FollowUpMail.config" />
-	  <MailingController Include="$(WebDir)\Controllers\AutomatedMaillingController.cs" />
-	  <EventHandler Include="$(WebDir)\EventHandlers\FollowUpMailHandler.cs" />
-	  <Settings Include="$(WebDir)\Models\Settings\FollowUpMailConfig.cs" />
-	  <ReaderService Include="$(WebDir)\Services\ConfigReaderService.cs" />
-	  <MailingService Include="$(WebDir)\Services\AutomatedMaillingService.cs" />
-	  <MailingRepository Include="$(WebDir)\Repositories\AutomatedMaillingRepository.cs" />
+	  <FollowUpMail Include="$(WebDir)\bin\TeaCommerce.FollowUpMail.dll" />
 	  <Package Include="$(BuildDir)\package.xml" />
     </ItemGroup>
 	
 	<Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(MailingController)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(EventHandler)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Settings)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(ReaderService)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(MailingService)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(MailingRepository)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(FollowUpMail)" DestinationFolder="$(PublishDir)" />
 	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />	
   </Target>
   

@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FollowUpMail</RootNamespace>
-    <AssemblyName>FollowUpMail</AssemblyName>
+    <AssemblyName>TeaCommerce.FollowUpMail</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
