@@ -35,28 +35,16 @@
   
   <Target Name="CopyFiles" DependsOnTargets="Clean">
     <ItemGroup>  
-	  <CartStep Include="$(WebDir)\Views\CartStep3.cshtml" />
-	  <ConfigFile Include="$(WebDir)\Config\ZeroCostPaymentMethodHandler.config" />
-	  <EventHandler Include="$(WebDir)\EventHandlers\ZeroCostPaymentHandler.cs" />
-	  <Settings Include="$(WebDir)\Models\Settings\ZeroCostPaymentConfig.cs" />
-	  <ReaderService Include="$(WebDir)\Services\ConfigReaderService.cs" />
+	  <CartStep Include="$(WebDir)\Views\CartStep3-ZeroCostPayment.cshtml" />
+	  <ConfigFile Include="$(WebDir)\Config\ZeroCostPayment.config" />
+	  <ZeroCostPayment Include="$(WebDir)\bin\TeaCommerce.ZeroCostPayment.dll" />
 	  <Package Include="$(BuildDir)\package.xml" />
     </ItemGroup>
 	
 	<Copy SourceFiles="@(CartStep)" DestinationFolder="$(PublishDir)" />
 	<Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(EventHandler)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Settings)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(ReaderService)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(ZeroCostPayment)" DestinationFolder="$(PublishDir)" />
 	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />		
-	
-<!-- 	<Copy SourceFiles="@(CartStep)" DestinationFolder="$(PublishDir)\Views\" />
-	<Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(PublishDir)\Config\" />
-	<Copy SourceFiles="@(EventHandler)" DestinationFolder="$(PublishDir)\EventHandlers\" />
-	<Copy SourceFiles="@(Settings)" DestinationFolder="$(PublishDir)\Models\Settings\" />
-	<Copy SourceFiles="@(ReaderService)" DestinationFolder="$(PublishDir)\Services\" />
-	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />	 -->
-	
   </Target>
   
   <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">

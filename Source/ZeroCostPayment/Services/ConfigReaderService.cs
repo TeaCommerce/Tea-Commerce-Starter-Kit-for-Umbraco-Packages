@@ -2,7 +2,7 @@
 using System.Web;
 using System.Xml.Serialization;
 
-namespace Zero_cost_payment_method_management.Services {
+namespace ZeroCostPayment.Services {
   public class ConfigReaderService {
     private static ConfigReaderService _instance;
 

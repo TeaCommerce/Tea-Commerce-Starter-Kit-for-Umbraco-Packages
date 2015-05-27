@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Zero_cost_payment_method_management</RootNamespace>
-    <AssemblyName>ZeroCostPaymentMethodManagement</AssemblyName>
+    <RootNamespace>ZeroCostPayment</RootNamespace>
+    <AssemblyName>TeaCommerce.ZeroCostPayment</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -44,7 +44,7 @@
     <Compile Include="Services\ConfigReaderService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CartStep3.cshtml" />
+    <Content Include="Views\CartStep3-ZeroCostPayment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="businesslogic">
@@ -77,7 +77,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\ZeroCostPaymentMethodHandler.config" />
+    <Content Include="Config\ZeroCostPayment.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\Publish to local test site.pubxml" />
   </ItemGroup>
   <ItemGroup />

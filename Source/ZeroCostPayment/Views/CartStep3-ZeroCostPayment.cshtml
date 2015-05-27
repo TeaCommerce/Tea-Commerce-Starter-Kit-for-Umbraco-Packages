@@ -3,9 +3,9 @@
 @using TeaCommerce.Umbraco.Web
 @using Umbraco.Core.Models
 @using Umbraco.Web
-@using Zero_cost_payment_method_management
-@using Zero_cost_payment_method_management.Models.Settings
-@using Zero_cost_payment_method_management.Services
+@using ZeroCostPayment.Models.Settings
+@using ZeroCostPayment.Services
+
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
@@ -18,7 +18,7 @@
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
   Order order = TC.GetCurrentOrder( storeId, false );
 
-  ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPaymentMethodHandler.config" );
+  ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPayment.config" );
   ZeroCostPaymentSetting storeSetting = config.Settings.FirstOrDefault( setting => setting.StoreId == storeId );
 
   long zeroCostPaymentId = storeSetting != null ? storeSetting.PaymentMethodId : 0;
