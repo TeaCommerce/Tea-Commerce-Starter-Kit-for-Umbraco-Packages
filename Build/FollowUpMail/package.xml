@@ -7,34 +7,9 @@
       <orgName>FollowUpMail.config</orgName>
     </file>
 	<file>
-      <guid>AutomatedMaillingController.cs</guid>
-      <orgPath>\Controllers</orgPath>
-      <orgName>AutomatedMaillingController.cs</orgName>
-    </file>
-	<file>
-      <guid>FollowUpMailHandler.cs</guid>
-      <orgPath>\EventHandlers</orgPath>
-      <orgName>FollowUpMailHandler.cs</orgName>
-    </file>
-	<file>
-      <guid>FollowUpMailConfig.cs</guid>
-      <orgPath>\Models\Settings</orgPath>
-      <orgName>FollowUpMailConfig.cs</orgName>
-    </file>
-	<file>
-      <guid>AutomatedMaillingService.cs</guid>
-      <orgPath>\Services</orgPath>
-      <orgName>AutomatedMaillingService.cs</orgName>
-    </file>
-	<file>
-      <guid>ConfigReaderService.cs</guid>
-      <orgPath>\Services</orgPath>
-      <orgName>ConfigReaderService.cs</orgName>
-    </file>
-	<file>
-      <guid>AutomatedMaillingRepository.cs</guid>
-      <orgPath>\Repositories</orgPath>
-      <orgName>AutomatedMaillingRepository.cs</orgName>
+      <guid>TeaCommerce.FollowUpMail.dll</guid>
+      <orgPath>\bin</orgPath>
+      <orgName>TeaCommerce.FollowUpMail.dll</orgName>
     </file>
   </files>
   <info>
