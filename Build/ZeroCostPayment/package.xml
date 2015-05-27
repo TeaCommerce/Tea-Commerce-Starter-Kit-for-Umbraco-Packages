@@ -2,14 +2,14 @@
 <umbPackage>
   <files>
     <file>
-      <guid>CartStep3.cshtml</guid>
+      <guid>CartStep3-ZeroCostPayment.cshtml</guid>
       <orgPath>/Views</orgPath>
-      <orgName>CartStep3.cshtml</orgName>
+      <orgName>CartStep3-ZeroCostPayment.cshtml</orgName>
     </file>
 	<file>
-      <guid>ZeroCostPaymentMethodHandler.config</guid>
+      <guid>ZeroCostPayment.config</guid>
       <orgPath>/Config</orgPath>
-      <orgName>ZeroCostPaymentMethodHandler.config</orgName>
+      <orgName>ZeroCostPayment.config</orgName>
     </file>
 	<file>
       <guid>ZeroCostPaymentHandler.cs</guid>
@@ -17,14 +17,9 @@
       <orgName>ZeroCostPaymentHandler.cs</orgName>
     </file>
 	<file>
-      <guid>ZeroCostPaymentConfig.cs</guid>
-      <orgPath>\Models\Settings</orgPath>
-      <orgName>ZeroCostPaymentConfig.cs</orgName>
-    </file>
-	<file>
-      <guid>ConfigReaderService.cs</guid>
-      <orgPath>\Services</orgPath>
-      <orgName>ConfigReaderService.cs</orgName>
+      <guid>TeaCommerce.ZeroCostPayment.dll</guid>
+      <orgPath>\bin</orgPath>
+      <orgName>TeaCommerce.ZeroCostPayment.dll</orgName>
     </file>
   </files>
   <info>

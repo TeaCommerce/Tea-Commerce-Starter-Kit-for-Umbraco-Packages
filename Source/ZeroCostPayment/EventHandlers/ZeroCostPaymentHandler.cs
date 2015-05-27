@@ -3,10 +3,10 @@ using TeaCommerce.Api.Models;
 using TeaCommerce.Api.Notifications;
 using TeaCommerce.Api.Web;
 using Umbraco.Core;
-using Zero_cost_payment_method_management.Models.Settings;
-using Zero_cost_payment_method_management.Services;
+using ZeroCostPayment.Models.Settings;
+using ZeroCostPayment.Services;
 
-namespace Zero_cost_payment_method_management.EventHandlers {
+namespace ZeroCostPayment.EventHandlers {
   public class ZeroCostPaymentHandler : ApplicationEventHandler {
 
     protected override void ApplicationStarted( UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext ) {
@@ -18,7 +18,7 @@ namespace Zero_cost_payment_method_management.EventHandlers {
      * Set the payment method to the default payment method for the country if the price of the order goes above 0.
      */
     private void Order_Updated( Order order, OrderUpdatedEventArgs orderUpdatedEventArgs ) {
-      ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPaymentMethodHandler.config" );
+      ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPayment.config" );
       ZeroCostPaymentSetting storeSetting = config.Settings.FirstOrDefault( setting => setting.StoreId == order.StoreId );
 
       long zeroCostPaymentId = storeSetting != null ? storeSetting.PaymentMethodId : 0;
