@@ -25,7 +25,7 @@
   <info>
     <package>
       <name>Starterkit for Umbraco - Packages - Zero cost payment</name>
-      <version>1.0.1</version>
+      <version>1.0</version>
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
       <requirements>
